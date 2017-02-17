@@ -4,7 +4,6 @@
   <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
   <classpathentry kind="output" path="target/classes"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-  <classpathentry kind="var" path="M2_REPO/junit/junit/3.8.1/junit-3.8.1.jar" sourcepath="M2_REPO/junit/junit/3.8.1/junit-3.8.1-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/selenium-java/2.53.1/selenium-java-2.53.1.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/selenium-chrome-driver/2.53.1/selenium-chrome-driver-2.53.1.jar" sourcepath="M2_REPO/org/seleniumhq/selenium/selenium-chrome-driver/2.53.1/selenium-chrome-driver-2.53.1-sources.jar">
     <attributes>
@@ -193,4 +192,15 @@
       <attribute value="jar:file:/home/haitao/.m2/repository/org/seleniumhq/selenium/selenium-leg-rc/2.53.1/selenium-leg-rc-2.53.1-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/testng/testng/6.9.10/testng-6.9.10.jar" sourcepath="M2_REPO/org/testng/testng/6.9.10/testng-6.9.10-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/haitao/.m2/repository/org/testng/testng/6.9.10/testng-6.9.10-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/beust/jcommander/1.48/jcommander-1.48.jar" sourcepath="M2_REPO/com/beust/jcommander/1.48/jcommander-1.48-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/haitao/.m2/repository/com/beust/jcommander/1.48/jcommander-1.48-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar"/>
 </classpath>

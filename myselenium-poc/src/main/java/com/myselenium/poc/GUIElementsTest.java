@@ -48,12 +48,11 @@ public class GUIElementsTest {
 		driver.close();
 	}
 
-	// ??
 	public void GetElementByLinkText() {
 		WebDriver driver = new FirefoxDriver();
 
 		driver.get(URL);
-		WebElement element = driver.findElement(By.linkText("ispider")); // ??
+		WebElement element = driver.findElement(By.linkText("ispider"));
 		System.out.println(element.toString());
 		driver.close();
 	}
