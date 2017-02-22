@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -37,14 +36,10 @@ public class SixpmLoginHandler {
 		System.out.println("Link de la pagina de logueo: " + link);
 		driver.get(link);
 		System.out.println("Se cargo la pagina:" + link);
-		driver.findElement(By.id("ap_email")).sendKeys("guido.corazza@outlook.com");
-		driver.findElement(By.id("ap_password")).sendKeys("6pmLluvia92");
+		driver.findElement(By.id("ap_email")).sendKeys("email.com");
+		driver.findElement(By.id("ap_password")).sendKeys("pasword.com");
 		driver.findElement(By.id("signInSubmit-input")).click();
 
-		WebDriverWait myWait = new WebDriverWait(driver, 5);
-		myWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.herospecialContainer")));
-
-		System.out.println("Se logueo con exito :" + test());
 	}
 
 	public Boolean test() {

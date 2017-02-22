@@ -1,5 +1,6 @@
 package com.myselenium.poc.sixpm;
 
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -37,17 +38,19 @@ public class SixpmCleanCartHandler {
 		
 		System.out.println("FIn de la espera");
 		
-		long amount = (long) js
-				.executeScript("return document.querySelectorAll('#cart .item .qty .moveFromCart .remove').length");
+		String amount = js
+				.executeScript("return document.querySelectorAll('#cart .item .qty .moveFromCart .remove')").toString();
 
+		int a = Integer.parseInt(amount);
 		System.out.println("Cantidad inicial: " + amount);
 
-		while (amount != 0) {
+		while (a != 0) {
 			js.executeScript(
 					"Array.prototype.forEach.call(document.querySelectorAll('#cart .item .qty .moveFromCart .remove'), function (item) {item.click();});");
-			amount = (long) js
-					.executeScript("return document.querySelectorAll('#cart .item .qty .moveFromCart .remove').length");
+			amount = js
+					.executeScript("return document.querySelectorAll('#cart .item .qty .moveFromCart .remove')").toString();
 			System.out.println("Ahora hay: " + amount);
+			a = Integer.parseInt(amount);
 		}
 
 		System.out.println("Se limpio el carrito con exito: " + test());
@@ -57,10 +60,12 @@ public class SixpmCleanCartHandler {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		driver.get(URL);
 
-		long amount = (long) js
-				.executeScript("return document.querySelectorAll('#cart .item .qty .moveFromCart .remove').length");
+		String amount = js
+				.executeScript("return document.querySelectorAll('#cart .item .qty .moveFromCart .remove')").toString();
 
-		return amount == 0;
+		int a = Integer.parseInt(amount);
+		
+		return a == 0;
 	}
 
 }
